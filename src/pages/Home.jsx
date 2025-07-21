@@ -4,20 +4,20 @@ import prajwalImg from '../images/p.jpg';
 
 export default function Home() {
   return (
-    <section className="relative bg-gradient-to-tr from-blue-100 via-white to-pink-100 min-h-screen flex items-center justify-center px-4 py-20">
+    <section className="relative bg-gradient-to-tr from-blue-100 via-white to-pink-100 min-h-screen flex items-center justify-center px-4 pt-36 pb-20">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-200 via-transparent to-white opacity-30 pointer-events-none animate-pulse" />
 
       <div className="max-w-3xl mx-auto text-center z-10">
         <img
           src={prajwalImg}
-          alt="Prajwal"
+          alt="prajwal"
           className="w-40 h-40 rounded-full mx-auto shadow-2xl border-4 border-blue-700"
         />
-        
+
         <h1 className="text-5xl font-extrabold text-blue-800 mt-6">
           Hi, I’m Prajwal
         </h1>
-        
+
         <h2 className="text-2xl text-gray-700 font-medium mt-4">
           <Typewriter
             words={['Aspiring Web Developer', 'Diploma Student', 'Future IT Professional']}

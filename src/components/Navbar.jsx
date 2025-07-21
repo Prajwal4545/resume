@@ -1,14 +1,25 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
+  const location = useLocation();
+
+  const linkClass = (path) =>
+    `font-bold hover:text-blue-600 ${
+      location.pathname === path ? 'text-blue-600 underline' : 'text-gray-800'
+    }`;
+
   return (
-    <nav className="bg-white shadow p-4 flex justify-around sticky top-0 z-50">
-      <Link to="/" className="font-bold text-xl text-blue-700">Prajwal</Link>
+    <nav className="flex justify-between items-center px-6 py-4 bg-white shadow-md">
+      {/* Logo or Name */}
+      <span className="text-xl font-bold text-gray-800">Prajwal</span>
+
+      {/* Navigation Links */}
       <div className="space-x-4">
-        <Link to="/about">About</Link>
-        <Link to="/skills">Skills</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/contact">Contact</Link>
+        <Link to="/" className={linkClass('/')}>Home</Link>
+        <Link to="/about" className={linkClass('/about')}>About</Link>
+        <Link to="/skills" className={linkClass('/skills')}>Skills</Link>
+        <Link to="/projects" className={linkClass('/projects')}>Projects</Link>
+        <Link to="/contact" className={linkClass('/contact')}>Contact</Link>
       </div>
     </nav>
   );
