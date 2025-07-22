@@ -10,10 +10,10 @@ export default function Navbar() {
 
   return (
     <nav className="flex justify-between items-center px-6 py-4 bg-white shadow-md">
-      {/* Logo or Name */}
-      <span className="text-xl font-bold text-gray-800">Prajwal</span>
+      {/* Prajwal name on the left */}
+      <span className="text-2xl font-bold text-gray-800">Prajwal</span>
 
-      {/* Navigation Links */}
+      {/* Navigation Links on the right */}
       <div className="space-x-4">
         <Link to="/" className={linkClass('/')}>Home</Link>
         <Link to="/about" className={linkClass('/about')}>About</Link>

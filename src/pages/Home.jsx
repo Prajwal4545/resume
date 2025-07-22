@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
+import { Link } from 'react-router-dom'; // ✅ Required import
 import prajwalImg from '../images/p.jpg';
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
       <div className="max-w-3xl mx-auto text-center z-10">
         <img
           src={prajwalImg}
-          alt="prajwal"
+          alt="praj"
           className="w-40 h-40 rounded-full mx-auto shadow-2xl border-4 border-blue-700"
         />
 
@@ -34,13 +35,14 @@ export default function Home() {
           Building websites with creativity and functionality.
         </p>
 
+        {/* ✅ Know More Button with React Router */}
         <div className="mt-8">
-          <a
-            href="/about"
+          <Link
+            to="/about"
             className="inline-block bg-blue-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-blue-800 transition-transform transform hover:scale-105 duration-300"
           >
             Know More
-          </a>
+          </Link>
         </div>
       </div>
     </section>
