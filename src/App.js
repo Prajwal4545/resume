@@ -11,7 +11,7 @@ function App() {
     <Router basename="/portfolio">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />        {/* ✅ Home page loads by default */}
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
